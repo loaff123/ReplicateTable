@@ -1,0 +1,54 @@
+{
+  "artifacts": {
+    "author_cases.py": {
+      "sha256": "d1b677bd78e94f36dadfdd204f26fac5bc282b0be96ac06392677945f904bb3a",
+      "size_bytes": 22928
+    },
+    "derivations.json": {
+      "sha256": "b868f2291a1186a32969bd0d6a64e0d06c12d8bfd2dfc8333f6817d347b92010",
+      "size_bytes": 5564
+    },
+    "expected.json": {
+      "sha256": "8381f9418df847a78c2d2dfb5a66eeb7bad74ac9236115640d992159225eb9f8",
+      "size_bytes": 71405
+    },
+    "fixtures.json": {
+      "sha256": "53d4180f65c13c043139c4845a43396ea84e5706b78de36398a904688564626f",
+      "size_bytes": 59466
+    },
+    "freeze.md": {
+      "sha256": "e4009f2fbe0db1fd966db6c9a94a00f1f3865a9faed07f3a14d39aad4e99868c",
+      "size_bytes": 7759
+    },
+    "oracle.py": {
+      "sha256": "b968d49c92056fb06a4be29e27cd3e09d828cc8849b0dfc54a70f2aa1fc1d6ad",
+      "size_bytes": 16557
+    }
+  },
+  "byte_identical_source_artifacts": [
+    "author_cases.py",
+    "derivations.json",
+    "expected.json",
+    "fixtures.json",
+    "oracle.py"
+  ],
+  "candidate_engine_validation_performed": false,
+  "case_count": 35,
+  "corpus_id": "replicatetable-clean-rebuild-supplement-v1",
+  "file_allowlist": [
+    "author_cases.py",
+    "derivations.json",
+    "expected.json",
+    "fixtures.json",
+    "freeze.md",
+    "freeze_sha256.json",
+    "oracle.py"
+  ],
+  "manifest_kind": "public-projection-of-newly-frozen-supplemental-corpus",
+  "not_recovered_historical_bytes": true,
+  "projection_date_utc": "2026-10-06",
+  "result_rows": 20,
+  "source_freeze_manifest_sha256": "b5a26c0a9f518c3c7455504f6194d058b7ae7693fc8397b3a7236667d5848228",
+  "support_records": 72,
+  "version": 1
+}

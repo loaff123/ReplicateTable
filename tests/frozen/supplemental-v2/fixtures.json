@@ -1,0 +1,2629 @@
+{
+  "cases": [
+    {
+      "data": {
+        "coords": {
+          "key:00": {
+            "dtype": "uint64",
+            "values": [
+              18446744073709551615,
+              9007199254740993,
+              9007199254740995
+            ]
+          }
+        },
+        "dimensions": {
+          "key:00": 3
+        },
+        "variables": {
+          "binary32": {
+            "dims": [
+              "key:00"
+            ],
+            "dtype": "float32",
+            "units": null,
+            "values": [
+              0.5,
+              -0.0,
+              16777216.0
+            ]
+          },
+          "signed": {
+            "dims": [
+              "key:00"
+            ],
+            "dtype": "int64",
+            "units": null,
+            "values": [
+              -9223372036854775808,
+              9007199254740993,
+              9223372036854775807
+            ]
+          },
+          "unsigned": {
+            "dims": [
+              "key:00"
+            ],
+            "dtype": "uint64",
+            "units": null,
+            "values": [
+              18446744073709551615,
+              9007199254740995,
+              0
+            ]
+          }
+        }
+      },
+      "id": "S01_direct_uint64_keys_and_integer_values",
+      "kind": "execute",
+      "purpose": "Exact int64/uint64 direct outputs and uint64 row keys; direct binary32 and signed zero.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "key:00",
+            "source": "signed",
+            "source_unit": null,
+            "stages": [],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "n_valid",
+            "source": "unsigned",
+            "source_unit": null,
+            "stages": [],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "stage",
+            "source": "binary32",
+            "source_unit": null,
+            "stages": [],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [
+          "key:00"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "case": {
+            "dtype": "int64",
+            "values": [
+              9223372036854775807,
+              -9223372036854775808,
+              9007199254740993
+            ]
+          }
+        },
+        "dimensions": {
+          "case": 3
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "case"
+            ],
+            "dtype": "int64",
+            "units": null,
+            "values": [
+              7,
+              8,
+              9
+            ]
+          }
+        }
+      },
+      "id": "S02_direct_signed_extreme_keys",
+      "kind": "execute",
+      "purpose": "Signed int64 extreme and large keys remain exact.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [
+          "case"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "case": {
+            "dtype": "<U1",
+            "values": [
+              "z",
+              "a"
+            ]
+          },
+          "replicate": {
+            "dtype": "int64",
+            "values": [
+              7,
+              3
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              9,
+              2
+            ]
+          }
+        },
+        "dimensions": {
+          "case": 2,
+          "replicate": 2,
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample",
+              "case",
+              "replicate"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              2,
+              10,
+              4,
+              20,
+              6,
+              null,
+              8,
+              40
+            ]
+          },
+          "weights": {
+            "dims": [
+              "replicate",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "percent",
+            "values": [
+              0,
+              25,
+              75,
+              100
+            ]
+          }
+        }
+      },
+      "id": "S03_percent_named_alignment",
+      "kind": "execute",
+      "purpose": "Weight dimensions are reordered relative to physical source and subset-aligned by name.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "equal_replicates",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "samples",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "pooled",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample",
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "pooled",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [
+          "case"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "case": {
+            "dtype": "<U1",
+            "values": [
+              "b",
+              "a"
+            ]
+          },
+          "replicate": {
+            "dtype": "int64",
+            "values": [
+              2,
+              0,
+              1
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              1,
+              0
+            ]
+          }
+        },
+        "dimensions": {
+          "case": 2,
+          "replicate": 3,
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "case",
+              "replicate",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              2,
+              null,
+              10,
+              14,
+              null,
+              null,
+              null,
+              null,
+              5,
+              null,
+              20,
+              24
+            ]
+          }
+        }
+      },
+      "id": "S04_two_stage_failure_policies",
+      "kind": "execute",
+      "purpose": "Failed intermediate values become missing; final reasons belong only to final stage.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "skip1",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 2,
+                "missing": "skip",
+                "name": "samples",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "skip2",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 2,
+                "missing": "skip",
+                "name": "samples",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 2,
+                "missing": "skip",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "prop1",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 2,
+                "missing": "skip",
+                "name": "samples",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "propagate",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "prop2",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 2,
+                "missing": "propagate",
+                "name": "samples",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 2,
+                "missing": "propagate",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [
+          "case"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "case": {
+            "dtype": "<U7",
+            "values": [
+              "zero",
+              "missing",
+              "short",
+              "partial"
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              2,
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "case": 4,
+          "sample": 3
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "case",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1,
+              2,
+              3,
+              null,
+              null,
+              null,
+              4,
+              null,
+              null,
+              2,
+              null,
+              10
+            ]
+          },
+          "weights": {
+            "dims": [
+              "case",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "percent",
+            "values": [
+              0,
+              0,
+              0,
+              100,
+              200,
+              0,
+              0,
+              100,
+              300,
+              25,
+              100,
+              75
+            ]
+          }
+        }
+      },
+      "id": "S05_one_stage_failure_reason_order",
+      "kind": "execute",
+      "purpose": "One-stage missing/min-count/zero-weight predicates and exact reason order.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "skip",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 2,
+                "missing": "skip",
+                "name": "samples",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "propagate",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 2,
+                "missing": "propagate",
+                "name": "samples",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [
+          "case"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "replicate": {
+            "dtype": "int64",
+            "values": [
+              1,
+              0
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              9,
+              2
+            ]
+          }
+        },
+        "dimensions": {
+          "replicate": 2,
+          "sample": 2
+        },
+        "variables": {
+          "direct": {
+            "dims": [],
+            "dtype": "float64",
+            "units": "degC",
+            "values": [
+              0
+            ]
+          },
+          "response": {
+            "dims": [
+              "replicate",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "degC",
+            "values": [
+              0,
+              10,
+              20,
+              null
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "percent",
+            "values": [
+              25,
+              75
+            ]
+          }
+        }
+      },
+      "id": "S06_affine_celsius_kelvin",
+      "kind": "execute",
+      "purpose": "Positive affine conversion is applied once before ordered reductions and direct output.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "two_stage",
+            "source": "response",
+            "source_unit": "degC",
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "samples",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": "K"
+          },
+          {
+            "broadcast": [],
+            "name": "pooled",
+            "source": "response",
+            "source_unit": "degC",
+            "stages": [
+              {
+                "dims": [
+                  "replicate",
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "pooled",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              }
+            ],
+            "target_unit": "K"
+          },
+          {
+            "broadcast": [],
+            "name": "minimum",
+            "source": "response",
+            "source_unit": "degC",
+            "stages": [
+              {
+                "dims": [
+                  "sample",
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "extrema",
+                "op": "min"
+              }
+            ],
+            "target_unit": "K"
+          },
+          {
+            "broadcast": [],
+            "name": "maximum",
+            "source": "response",
+            "source_unit": "degC",
+            "stages": [
+              {
+                "dims": [
+                  "sample",
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "extrema",
+                "op": "max"
+              }
+            ],
+            "target_unit": "K"
+          },
+          {
+            "broadcast": [],
+            "name": "direct",
+            "source": "direct",
+            "source_unit": "degC",
+            "stages": [],
+            "target_unit": "K"
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "replicate": {
+            "dtype": "int64",
+            "values": [
+              1,
+              0
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              9,
+              2
+            ]
+          }
+        },
+        "dimensions": {
+          "replicate": 2,
+          "sample": 2
+        },
+        "variables": {
+          "direct": {
+            "dims": [],
+            "dtype": "float64",
+            "units": "degF",
+            "values": [
+              32
+            ]
+          },
+          "response": {
+            "dims": [
+              "replicate",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "degF",
+            "values": [
+              32,
+              50,
+              68,
+              null
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "percent",
+            "values": [
+              25,
+              75
+            ]
+          }
+        }
+      },
+      "id": "S07_affine_fahrenheit_celsius",
+      "kind": "execute",
+      "purpose": "Positive affine conversion is applied once before ordered reductions and direct output.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "two_stage",
+            "source": "response",
+            "source_unit": "degF",
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "samples",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": "degC"
+          },
+          {
+            "broadcast": [],
+            "name": "pooled",
+            "source": "response",
+            "source_unit": "degF",
+            "stages": [
+              {
+                "dims": [
+                  "replicate",
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "pooled",
+                "op": "weighted_mean",
+                "weight_unit": "percent",
+                "weights": "weights"
+              }
+            ],
+            "target_unit": "degC"
+          },
+          {
+            "broadcast": [],
+            "name": "minimum",
+            "source": "response",
+            "source_unit": "degF",
+            "stages": [
+              {
+                "dims": [
+                  "sample",
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "extrema",
+                "op": "min"
+              }
+            ],
+            "target_unit": "degC"
+          },
+          {
+            "broadcast": [],
+            "name": "maximum",
+            "source": "response",
+            "source_unit": "degF",
+            "stages": [
+              {
+                "dims": [
+                  "sample",
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "extrema",
+                "op": "max"
+              }
+            ],
+            "target_unit": "degC"
+          },
+          {
+            "broadcast": [],
+            "name": "direct",
+            "source": "direct",
+            "source_unit": "degF",
+            "stages": [],
+            "target_unit": "degC"
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "case": {
+            "dtype": "float64",
+            "values": [
+              1.0,
+              -0.0
+            ]
+          }
+        },
+        "dimensions": {
+          "case": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "case"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              2.5,
+              null
+            ]
+          }
+        }
+      },
+      "id": "S08_direct_nan_and_signed_zero_key",
+      "kind": "execute",
+      "purpose": "Direct NaN is missing with reason; stored float key signed zero is retained.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [
+          "case"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "n_input": {
+            "dtype": "int64",
+            "values": [
+              2,
+              1
+            ]
+          },
+          "stage": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "n_input": 2,
+          "stage": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "n_input",
+              "stage"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              2,
+              4,
+              6,
+              8
+            ]
+          }
+        }
+      },
+      "id": "S09_opaque_name_collisions",
+      "kind": "execute",
+      "purpose": "Logical row, column, stage and support-looking names cannot collide physically.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "n_input",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "stage"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "value",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "key:00",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "stage"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "value",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "value:00",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "stage"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "value",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "reasons:00",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "stage"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "value",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "stage",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "stage"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "value",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "n_valid",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "stage"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "value",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [
+          "n_input"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {},
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R01_missing_reduced_coordinate",
+      "kind": "execute",
+      "purpose": "R01_missing_reduced_coordinate",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              0
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R02_duplicate_reduced_label",
+      "kind": "execute",
+      "purpose": "R02_duplicate_reduced_label",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "object",
+            "values": [
+              "present",
+              null
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R03_missing_reduced_label",
+      "kind": "execute",
+      "purpose": "R03_missing_reduced_label",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "float64",
+            "values": [
+              0.0,
+              -0.0
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R04_duplicate_signed_zero_reduced_labels",
+      "kind": "execute",
+      "purpose": "R04_duplicate_signed_zero_reduced_labels",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              null,
+              2.0
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              -1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "id": "R05_negative_weight_at_missing",
+      "kind": "execute",
+      "purpose": "R05_negative_weight_at_missing",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "weighted_mean",
+                "weight_unit": null,
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              null,
+              2.0
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              null,
+              1.0
+            ]
+          }
+        }
+      },
+      "id": "R06_nan_weight_at_missing",
+      "kind": "execute",
+      "purpose": "R06_nan_weight_at_missing",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "weighted_mean",
+                "weight_unit": null,
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              null,
+              2.0
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              {
+                "float_special": "+inf"
+              },
+              1.0
+            ]
+          }
+        }
+      },
+      "id": "R07_infinite_weight_at_missing",
+      "kind": "execute",
+      "purpose": "R07_infinite_weight_at_missing",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "weighted_mean",
+                "weight_unit": null,
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              {
+                "float_special": "+inf"
+              },
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R08_infinite_measurement",
+      "kind": "execute",
+      "purpose": "R08_infinite_measurement",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 1
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "s",
+            "values": [
+              1e+308
+            ]
+          }
+        }
+      },
+      "id": "R09_conversion_overflow",
+      "kind": "execute",
+      "purpose": "R09_conversion_overflow",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": "s",
+            "stages": [],
+            "target_unit": "ms"
+          }
+        ],
+        "row_dims": [
+          "sample"
+        ],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 1
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1e+308
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R10_weighted_product_overflow",
+      "kind": "execute",
+      "purpose": "R10_weighted_product_overflow",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "weighted_mean",
+                "weight_unit": null,
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1e+308,
+              1e+308
+            ]
+          }
+        }
+      },
+      "id": "R11_mean_sum_overflow",
+      "kind": "execute",
+      "purpose": "R11_mean_sum_overflow",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              0.0,
+              0.0
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1e+308,
+              1e+308
+            ]
+          }
+        }
+      },
+      "id": "R12_weight_sum_overflow",
+      "kind": "execute",
+      "purpose": "R12_weight_sum_overflow",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "weighted_mean",
+                "weight_unit": null,
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "replicate": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0
+            ]
+          }
+        },
+        "dimensions": {
+          "replicate": 2,
+          "sample": 1
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "replicate",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1e+308,
+              1e+308
+            ]
+          }
+        }
+      },
+      "id": "R13_second_stage_sum_overflow",
+      "kind": "execute",
+      "purpose": "Overflow also fails at second stage.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "samples",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "replicates",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R14_three_stages",
+      "kind": "execute",
+      "purpose": "R14_three_stages",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "a",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "b",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "c",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "replicate": {
+            "dtype": "int64",
+            "values": [
+              0
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "replicate": 1,
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "replicate",
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1,
+              2
+            ]
+          },
+          "weights": {
+            "dims": [
+              "replicate"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1
+            ]
+          }
+        }
+      },
+      "id": "R15_weighted_second_stage",
+      "kind": "execute",
+      "purpose": "A second weighted stage is forbidden.",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "samples",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "replicate"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "replicates",
+                "op": "weighted_mean",
+                "weight_unit": null,
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R16_repeated_removed_dimension",
+      "kind": "execute",
+      "purpose": "R16_repeated_removed_dimension",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "a",
+                "op": "mean"
+              },
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "b",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R17_zero_min_count",
+      "kind": "execute",
+      "purpose": "R17_zero_min_count",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 0,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R18_bool_min_count",
+      "kind": "execute",
+      "purpose": "R18_bool_min_count",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": true,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R19_duplicate_output_name",
+      "kind": "execute",
+      "purpose": "R19_duplicate_output_name",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          },
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "s",
+            "values": [
+              1.0,
+              2.0
+            ]
+          }
+        }
+      },
+      "id": "R20_exact_source_unit_assertion",
+      "kind": "execute",
+      "purpose": "R20_exact_source_unit_assertion",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": "second",
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "mean"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          },
+          "weights": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": "percent",
+            "values": [
+              25,
+              75
+            ]
+          }
+        }
+      },
+      "id": "R21_exact_weight_unit_assertion",
+      "kind": "execute",
+      "purpose": "R21_exact_weight_unit_assertion",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "weighted_mean",
+                "weight_unit": "%",
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "data": {
+        "coords": {
+          "other": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          },
+          "sample": {
+            "dtype": "int64",
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "dimensions": {
+          "other": 2,
+          "sample": 2
+        },
+        "variables": {
+          "response": {
+            "dims": [
+              "sample"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              2.0
+            ]
+          },
+          "weights": {
+            "dims": [
+              "other"
+            ],
+            "dtype": "float64",
+            "units": null,
+            "values": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "id": "R22_extra_weight_dimension",
+      "kind": "execute",
+      "purpose": "R22_extra_weight_dimension",
+      "recipe": {
+        "columns": [
+          {
+            "broadcast": [],
+            "name": "value",
+            "source": "response",
+            "source_unit": null,
+            "stages": [
+              {
+                "dims": [
+                  "sample"
+                ],
+                "min_count": 1,
+                "missing": "skip",
+                "name": "reduce",
+                "op": "weighted_mean",
+                "weight_unit": null,
+                "weights": "weights"
+              }
+            ],
+            "target_unit": null
+          }
+        ],
+        "row_dims": [],
+        "version": 1
+      }
+    },
+    {
+      "base_case": "S01_direct_uint64_keys_and_integer_values",
+      "id": "M01_direct_int64_null",
+      "kind": "result_mutation",
+      "mutations": [
+        {
+          "path": [
+            "rows",
+            0,
+            "values",
+            "key:00"
+          ],
+          "value": null
+        },
+        {
+          "path": [
+            "rows",
+            0,
+            "reasons",
+            "key:00"
+          ],
+          "value": [
+            "missing_values"
+          ]
+        }
+      ],
+      "purpose": "Integer direct values cannot be null even with missing_values."
+    },
+    {
+      "base_case": "S01_direct_uint64_keys_and_integer_values",
+      "id": "M02_direct_uint64_null",
+      "kind": "result_mutation",
+      "mutations": [
+        {
+          "path": [
+            "rows",
+            0,
+            "values",
+            "n_valid"
+          ],
+          "value": null
+        },
+        {
+          "path": [
+            "rows",
+            0,
+            "reasons",
+            "n_valid"
+          ],
+          "value": [
+            "missing_values"
+          ]
+        }
+      ],
+      "purpose": "Integer direct values cannot be null even with missing_values."
+    },
+    {
+      "id": "M03_rounded_weight_envelope_accept",
+      "kind": "support_model",
+      "purpose": "Separately rounded weight_valid may exceed weight_total within approved envelope.",
+      "record": {
+        "column": "value",
+        "keys": {},
+        "n_input": 4,
+        "n_positive_weight_valid": 3,
+        "n_valid": 3,
+        "reasons": [],
+        "stage": "reduce",
+        "unit": null,
+        "value": 0.9999999999999998,
+        "weight_total": 1e+16,
+        "weight_valid": 1.0000000000000002e+16
+      },
+      "stage": {
+        "dims": [
+          "sample"
+        ],
+        "min_count": 1,
+        "missing": "skip",
+        "name": "reduce",
+        "op": "weighted_mean",
+        "weight_unit": null,
+        "weights": "weights"
+      }
+    },
+    {
+      "id": "M04_rounded_weight_envelope_refuse",
+      "kind": "support_model",
+      "purpose": "Outside-envelope valid weight still refuses.",
+      "record": {
+        "column": "value",
+        "keys": {},
+        "n_input": 4,
+        "n_positive_weight_valid": 3,
+        "n_valid": 3,
+        "reasons": [],
+        "stage": "reduce",
+        "unit": null,
+        "value": 0.9999999999999998,
+        "weight_total": 1e+16,
+        "weight_valid": 1.0000000000000032e+16
+      },
+      "stage": {
+        "dims": [
+          "sample"
+        ],
+        "min_count": 1,
+        "missing": "skip",
+        "name": "reduce",
+        "op": "weighted_mean",
+        "weight_unit": null,
+        "weights": "weights"
+      }
+    }
+  ],
+  "corpus_id": "replicatetable-clean-rebuild-supplement-v1",
+  "version": 1
+}

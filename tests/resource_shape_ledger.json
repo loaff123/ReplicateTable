@@ -1,0 +1,548 @@
+{
+  "status": "Independent stdlib-only resource shape arithmetic; no candidate/oracle import or numerical reduction",
+  "verified_original_files": 13,
+  "scope": "Selected union, dtype bytes, row/support cardinality, offsets and W/V only. Source owner, raw coordinate, full unit/runtime/plan/output and combined journey projections are not certified.",
+  "fixtures": [
+    {
+      "fixture": "F1.json",
+      "sha256": "5be327ba2a4dfad6c442601ccff9993b05ee5efb0a870bc958854e5d589ec436",
+      "selected_variables": [
+        "covariate",
+        "gain",
+        "response"
+      ],
+      "selected_dimensions": [
+        "case",
+        "channel",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 224,
+      "output_rows": 4,
+      "support_records": 12,
+      "column_scratch_bytes": [
+        4352,
+        64,
+        64
+      ],
+      "numerical_scratch_bytes": 4352,
+      "sort_work": 21,
+      "engine_work": 592,
+      "work_cell_visits": 757,
+      "blocks": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "count": 8,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "channel",
+            "replicate"
+          ]
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "count": 4,
+          "start": 8,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F2.json",
+      "sha256": "7fea77c2c7153fcd1f38b0bcaffc6ca53476fdc7774f58c1eba77b38b96ef41b",
+      "selected_variables": [
+        "response"
+      ],
+      "selected_dimensions": [
+        "case",
+        "channel",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 192,
+      "output_rows": 4,
+      "support_records": 16,
+      "column_scratch_bytes": [
+        2816,
+        4352
+      ],
+      "numerical_scratch_bytes": 4352,
+      "sort_work": 21,
+      "engine_work": 992,
+      "work_cell_visits": 1173,
+      "blocks": [
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "count": 4,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "count": 8,
+          "start": 4,
+          "support_dims": [
+            "case",
+            "channel",
+            "replicate"
+          ]
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "count": 4,
+          "start": 12,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F3.json",
+      "sha256": "c9c4ade7fbac3d217925649110f71febc1f4c24aacf9fee635d212b8aa01782d",
+      "selected_variables": [
+        "response",
+        "weights"
+      ],
+      "selected_dimensions": [
+        "case",
+        "channel",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 216,
+      "output_rows": 4,
+      "support_records": 16,
+      "column_scratch_bytes": [
+        2864,
+        4400
+      ],
+      "numerical_scratch_bytes": 4400,
+      "sort_work": 21,
+      "engine_work": 1010,
+      "work_cell_visits": 1191,
+      "blocks": [
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "count": 4,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "count": 8,
+          "start": 4,
+          "support_dims": [
+            "case",
+            "channel",
+            "replicate"
+          ]
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "count": 4,
+          "start": 12,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F3_scaled.json",
+      "sha256": "9be887b40df96946bac30665b93d01e87886e0f1fb5ec3e0a4ffa60fc1291580",
+      "selected_variables": [
+        "response",
+        "weights"
+      ],
+      "selected_dimensions": [
+        "case",
+        "channel",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 216,
+      "output_rows": 4,
+      "support_records": 16,
+      "column_scratch_bytes": [
+        2864,
+        4400
+      ],
+      "numerical_scratch_bytes": 4400,
+      "sort_work": 21,
+      "engine_work": 1010,
+      "work_cell_visits": 1191,
+      "blocks": [
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "count": 4,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "count": 8,
+          "start": 4,
+          "support_dims": [
+            "case",
+            "channel",
+            "replicate"
+          ]
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "count": 4,
+          "start": 12,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F3_support_edges.json",
+      "sha256": "f16ea59dd0ab57f15bdd9e66cf4440de3fa957c2c71a751efda2be83e60a116f",
+      "selected_variables": [
+        "response",
+        "weights"
+      ],
+      "selected_dimensions": [
+        "case",
+        "sample"
+      ],
+      "selected_numeric_bytes": 192,
+      "output_rows": 4,
+      "support_records": 8,
+      "column_scratch_bytes": [
+        1856,
+        1856
+      ],
+      "numerical_scratch_bytes": 1856,
+      "sort_work": 21,
+      "engine_work": 520,
+      "work_cell_visits": 637,
+      "blocks": [
+        {
+          "column": "skip",
+          "stage": "samples",
+          "count": 4,
+          "start": 0,
+          "support_dims": [
+            "case"
+          ]
+        },
+        {
+          "column": "propagate",
+          "stage": "samples",
+          "count": 4,
+          "start": 4,
+          "support_dims": [
+            "case"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F4.json",
+      "sha256": "1fcd351f6f9d928a6fd89a7404ad642fded1775b04f4df228bc3de360fc3aff8",
+      "selected_variables": [
+        "duration",
+        "temperature",
+        "weights"
+      ],
+      "selected_dimensions": [
+        "case",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 216,
+      "output_rows": 2,
+      "support_records": 26,
+      "column_scratch_bytes": [
+        2176,
+        2224,
+        1456,
+        2176,
+        2176
+      ],
+      "numerical_scratch_bytes": 2224,
+      "sort_work": 17,
+      "engine_work": 1378,
+      "work_cell_visits": 1643,
+      "blocks": [
+        {
+          "column": "duration_mean",
+          "stage": "samples",
+          "count": 4,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "replicate"
+          ]
+        },
+        {
+          "column": "duration_mean",
+          "stage": "replicates",
+          "count": 2,
+          "start": 4,
+          "support_dims": [
+            "case"
+          ]
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "samples",
+          "count": 4,
+          "start": 6,
+          "support_dims": [
+            "case",
+            "replicate"
+          ]
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "replicates",
+          "count": 2,
+          "start": 10,
+          "support_dims": [
+            "case"
+          ]
+        },
+        {
+          "column": "temperature_pooled",
+          "stage": "all_cells",
+          "count": 2,
+          "start": 12,
+          "support_dims": [
+            "case"
+          ]
+        },
+        {
+          "column": "temperature_min",
+          "stage": "samples",
+          "count": 4,
+          "start": 14,
+          "support_dims": [
+            "case",
+            "replicate"
+          ]
+        },
+        {
+          "column": "temperature_min",
+          "stage": "replicates",
+          "count": 2,
+          "start": 18,
+          "support_dims": [
+            "case"
+          ]
+        },
+        {
+          "column": "temperature_max",
+          "stage": "samples",
+          "count": 4,
+          "start": 20,
+          "support_dims": [
+            "case",
+            "replicate"
+          ]
+        },
+        {
+          "column": "temperature_max",
+          "stage": "replicates",
+          "count": 2,
+          "start": 24,
+          "support_dims": [
+            "case"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F5.json",
+      "sha256": "ad70b290444f97c5b5575f5948351b09f104e6c2f662f99d0141d06f11b25382",
+      "selected_variables": [
+        "response"
+      ],
+      "selected_dimensions": [
+        "case",
+        "channel",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 192,
+      "output_rows": 4,
+      "support_records": 12,
+      "column_scratch_bytes": [
+        4352
+      ],
+      "numerical_scratch_bytes": 4352,
+      "sort_work": 21,
+      "engine_work": 576,
+      "work_cell_visits": 709,
+      "blocks": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "count": 8,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "channel",
+            "replicate"
+          ]
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "count": 4,
+          "start": 8,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F5_permuted.json",
+      "sha256": "7cc165f79af283c966ce01d073ce7c9fe8f2ab5b9119f8b8dde72624e7323959",
+      "selected_variables": [
+        "response"
+      ],
+      "selected_dimensions": [
+        "case",
+        "channel",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 192,
+      "output_rows": 4,
+      "support_records": 12,
+      "column_scratch_bytes": [
+        4352
+      ],
+      "numerical_scratch_bytes": 4352,
+      "sort_work": 21,
+      "engine_work": 576,
+      "work_cell_visits": 709,
+      "blocks": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "count": 8,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "channel",
+            "replicate"
+          ]
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "count": 4,
+          "start": 8,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    },
+    {
+      "fixture": "F6.json",
+      "sha256": "f83f897490cae203243ab77c422cc677b8c9bed0335faf8b50a361e021d0d7a8",
+      "selected_variables": [
+        "covariate",
+        "gain",
+        "response"
+      ],
+      "selected_dimensions": [
+        "case",
+        "channel",
+        "replicate",
+        "sample"
+      ],
+      "selected_numeric_bytes": 224,
+      "output_rows": 4,
+      "support_records": 12,
+      "column_scratch_bytes": [
+        4352,
+        64,
+        64
+      ],
+      "numerical_scratch_bytes": 4352,
+      "sort_work": 21,
+      "engine_work": 592,
+      "work_cell_visits": 757,
+      "blocks": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "count": 8,
+          "start": 0,
+          "support_dims": [
+            "case",
+            "channel",
+            "replicate"
+          ]
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "count": 4,
+          "start": 8,
+          "support_dims": [
+            "case",
+            "channel"
+          ]
+        }
+      ],
+      "frozen_row_support_counts_match": true,
+      "individual_A_R_H_V_caps_pass": true
+    }
+  ]
+}

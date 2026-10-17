@@ -1,0 +1,71 @@
+{
+  "all_source_fixture_bytes_unchanged": true,
+  "all_successful_numerical_expectations_unchanged": true,
+  "amendment_id": "replicatetable-clean-rebuild-supplement-v2-code-amendment",
+  "amendment_kind": "one-refusal-code-only",
+  "approved_v5_api_sha256": "60c6a54084b679e680d021878e267d2138463e51bd054981210310bd84761371",
+  "artifacts": {
+    "author_cases.py": {
+      "sha256": "47402049374dad1c2ab7e7b1e683a98a37fe431a9dff6efbee97226a98c97422",
+      "size_bytes": 22945
+    },
+    "derivations.json": {
+      "sha256": "b868f2291a1186a32969bd0d6a64e0d06c12d8bfd2dfc8333f6817d347b92010",
+      "size_bytes": 5564
+    },
+    "expected.json": {
+      "sha256": "94911607947340172e6ed4656fd6f0d939e32aa5e7fa416bc5657f89b552e3e2",
+      "size_bytes": 71422
+    },
+    "fixtures.json": {
+      "sha256": "53d4180f65c13c043139c4845a43396ea84e5706b78de36398a904688564626f",
+      "size_bytes": 59466
+    },
+    "freeze.md": {
+      "sha256": "e96dbd3709caf513ab433cd4fde627b116587a1d5dc3e21886c311106d433e2a",
+      "size_bytes": 9558
+    },
+    "oracle.py": {
+      "sha256": "ff41ba50b346da09d80214704a4bb6840eab6f1b977f7d8e97273a5c371ebdd7",
+      "size_bytes": 16574
+    }
+  },
+  "byte_identical_source_artifacts": [
+    "author_cases.py",
+    "derivations.json",
+    "expected.json",
+    "fixtures.json",
+    "oracle.py"
+  ],
+  "candidate_engine_validation_performed": false,
+  "case_count": 35,
+  "corpus_id": "replicatetable-clean-rebuild-supplement-v1",
+  "expected_field_delta": {
+    "after": "unsupported_later_stage_weights",
+    "before": "invalid_recipe",
+    "path": [
+      "cases",
+      "R15_weighted_second_stage",
+      "code"
+    ]
+  },
+  "file_allowlist": [
+    "author_cases.py",
+    "derivations.json",
+    "expected.json",
+    "fixtures.json",
+    "freeze.md",
+    "freeze_sha256.json",
+    "oracle.py"
+  ],
+  "freeze_date_utc": "2026-10-06",
+  "independent_finite_amendment_review": "passed",
+  "manifest_kind": "public-projection-of-v2-code-only-amendment",
+  "not_recovered_historical_bytes": true,
+  "result_rows": 20,
+  "source_freeze_manifest_sha256": "0c312830a1968b824bb461f5501eb13b7a008d7bf0347c1266f2f793fe460b54",
+  "source_v1_manifest_sha256": "b5a26c0a9f518c3c7455504f6194d058b7ae7693fc8397b3a7236667d5848228",
+  "source_v1_public_manifest_sha256": "7470ca7af3bd4942d911e40d0f66bf16b8d6d135964d2b4e31665df5e646e9fb",
+  "support_records": 72,
+  "version": 2
+}

@@ -1,0 +1,217 @@
+{
+  "id": "F4",
+  "data": {
+    "coords": {
+      "case": [
+        "c0",
+        "c1"
+      ],
+      "replicate": [
+        "r0",
+        "r1"
+      ],
+      "sample": [
+        0,
+        1,
+        2
+      ]
+    },
+    "variables": {
+      "duration": {
+        "dims": [
+          "case",
+          "replicate",
+          "sample"
+        ],
+        "values": [
+          1000,
+          2000,
+          3000,
+          4000,
+          5000,
+          6000,
+          2000,
+          3000,
+          4000,
+          5000,
+          6000,
+          7000
+        ],
+        "units": "ms",
+        "dtype": "float64"
+      },
+      "temperature": {
+        "dims": [
+          "case",
+          "replicate",
+          "sample"
+        ],
+        "values": [
+          0,
+          10,
+          30,
+          20,
+          null,
+          40,
+          100,
+          110,
+          130,
+          120,
+          null,
+          140
+        ],
+        "units": "degC",
+        "dtype": "float64"
+      },
+      "weights": {
+        "dims": [
+          "sample"
+        ],
+        "values": [
+          1,
+          2,
+          1
+        ],
+        "units": null,
+        "dtype": "float64"
+      }
+    }
+  },
+  "recipe": {
+    "version": 1,
+    "row_dims": [
+      "case"
+    ],
+    "columns": [
+      {
+        "name": "duration_mean",
+        "source": "duration",
+        "source_unit": "ms",
+        "target_unit": "s",
+        "broadcast": [],
+        "stages": [
+          {
+            "name": "samples",
+            "dims": [
+              "sample"
+            ],
+            "op": "mean",
+            "missing": "skip",
+            "min_count": 1
+          },
+          {
+            "name": "replicates",
+            "dims": [
+              "replicate"
+            ],
+            "op": "mean",
+            "missing": "skip",
+            "min_count": 1
+          }
+        ]
+      },
+      {
+        "name": "temperature_equal",
+        "source": "temperature",
+        "source_unit": "degC",
+        "target_unit": "K",
+        "broadcast": [],
+        "stages": [
+          {
+            "name": "samples",
+            "dims": [
+              "sample"
+            ],
+            "op": "weighted_mean",
+            "missing": "skip",
+            "min_count": 1,
+            "weights": "weights"
+          },
+          {
+            "name": "replicates",
+            "dims": [
+              "replicate"
+            ],
+            "op": "mean",
+            "missing": "skip",
+            "min_count": 1
+          }
+        ]
+      },
+      {
+        "name": "temperature_pooled",
+        "source": "temperature",
+        "source_unit": "degC",
+        "target_unit": "K",
+        "broadcast": [],
+        "stages": [
+          {
+            "name": "all_cells",
+            "dims": [
+              "replicate",
+              "sample"
+            ],
+            "op": "weighted_mean",
+            "missing": "skip",
+            "min_count": 1,
+            "weights": "weights"
+          }
+        ]
+      },
+      {
+        "name": "temperature_min",
+        "source": "temperature",
+        "source_unit": "degC",
+        "target_unit": "K",
+        "broadcast": [],
+        "stages": [
+          {
+            "name": "samples",
+            "dims": [
+              "sample"
+            ],
+            "op": "min",
+            "missing": "skip",
+            "min_count": 1
+          },
+          {
+            "name": "replicates",
+            "dims": [
+              "replicate"
+            ],
+            "op": "min",
+            "missing": "skip",
+            "min_count": 1
+          }
+        ]
+      },
+      {
+        "name": "temperature_max",
+        "source": "temperature",
+        "source_unit": "degC",
+        "target_unit": "K",
+        "broadcast": [],
+        "stages": [
+          {
+            "name": "samples",
+            "dims": [
+              "sample"
+            ],
+            "op": "max",
+            "missing": "skip",
+            "min_count": 1
+          },
+          {
+            "name": "replicates",
+            "dims": [
+              "replicate"
+            ],
+            "op": "max",
+            "missing": "skip",
+            "min_count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

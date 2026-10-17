@@ -1,0 +1,39 @@
+{
+  "phase": "after",
+  "profile": "public312",
+  "python": {
+    "abi": {
+      "abiflags": "",
+      "byteorder": "little",
+      "cache_tag": "cpython-312",
+      "debug": false,
+      "gil_disabled": false,
+      "machine": "x86_64",
+      "multiarch": "x86_64-linux-gnu",
+      "optimization": 0,
+      "platform": "linux",
+      "pointer_bits": 64,
+      "soabi": "cpython-312-x86_64-linux-gnu"
+    },
+    "build": [
+      "main",
+      "Sep 24 2026 17:57:43"
+    ],
+    "compiler": "Clang 22.1.3 ",
+    "core_libraries": {},
+    "executable": {
+      "sha256": "edffa803e5c4d73a1357f7f2c6c9fd38e9693712b2c06793e6a5e5cc1090d03a",
+      "size_bytes": 30964240
+    },
+    "implementation": "cpython",
+    "stdlib_code": {
+      "file_count": 687,
+      "sha256": "b2d0be26aff83bf3d203b23dc3627d7f25759272d6ca1df2833e8621c3064701",
+      "size_bytes": 13874413
+    },
+    "sys_version": "3.12.14 (main, Sep 24 2026, 17:57:43) [Clang 22.1.3 ]",
+    "version": "3.12.14"
+  },
+  "scope": "preparation only, not product runtime binding or qualification",
+  "stdlib_directory_count": 52
+}

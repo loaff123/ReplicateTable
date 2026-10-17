@@ -1,0 +1,4766 @@
+{
+  "version": 1,
+  "tolerances": {
+    "rel": 1e-12,
+    "abs": 1e-12
+  },
+  "cases": {
+    "F1": {
+      "row_dims": [
+        "case",
+        "channel"
+      ],
+      "units": {
+        "response_mean": null,
+        "covariate": null,
+        "gain": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 3.0,
+            "covariate": 10.0,
+            "gain": 1.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": 13.0,
+            "covariate": 10.0,
+            "gain": 2.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 23.0,
+            "covariate": 20.0,
+            "gain": 1.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": 33.0,
+            "covariate": 20.0,
+            "gain": 2.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 2.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 4.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 14.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 22.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 24.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 32.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 34.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 3.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 13.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 23.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 33.0,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "3",
+              "covariate": "10",
+              "gain": "1"
+            }
+          },
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": "13",
+              "covariate": "10",
+              "gain": "2"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "23",
+              "covariate": "20",
+              "gain": "1"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": "33",
+              "covariate": "20",
+              "gain": "2"
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "2"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "4"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "12"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "14"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "22"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "24"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "32"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "34"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "3"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "13"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "23"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "33"
+          }
+        ]
+      }
+    },
+    "F2": {
+      "row_dims": [
+        "case",
+        "channel"
+      ],
+      "units": {
+        "pooled": null,
+        "equal_replicate": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "values": {
+            "pooled": 3.0,
+            "equal_replicate": 6.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "values": {
+            "pooled": 13.0,
+            "equal_replicate": 16.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "values": {
+            "pooled": 23.0,
+            "equal_replicate": 26.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "values": {
+            "pooled": 33.0,
+            "equal_replicate": 36.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 6.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 3.0,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 6.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 13.0,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 6.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 23.0,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 6.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 33.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 0.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 3.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 10.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 3.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 22.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 20.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 3.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 32.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 30.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 3.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 42.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 6.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 16.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 26.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 36.0,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "values": {
+              "pooled": "3",
+              "equal_replicate": "6"
+            }
+          },
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "values": {
+              "pooled": "13",
+              "equal_replicate": "16"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "values": {
+              "pooled": "23",
+              "equal_replicate": "26"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "values": {
+              "pooled": "33",
+              "equal_replicate": "36"
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "6",
+            "weight_valid": "4",
+            "value": "3"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "6",
+            "weight_valid": "4",
+            "value": "13"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "6",
+            "weight_valid": "4",
+            "value": "23"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "6",
+            "weight_valid": "4",
+            "value": "33"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "0"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "1",
+            "value": "12"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "10"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "1",
+            "value": "22"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "20"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "1",
+            "value": "32"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "30"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "1",
+            "value": "42"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "6"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "16"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "26"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "36"
+          }
+        ]
+      }
+    },
+    "F3": {
+      "row_dims": [
+        "case",
+        "channel"
+      ],
+      "units": {
+        "pooled": null,
+        "equal_replicate": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "values": {
+            "pooled": 2.4,
+            "equal_replicate": 6.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "values": {
+            "pooled": 12.4,
+            "equal_replicate": 16.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "values": {
+            "pooled": 22.4,
+            "equal_replicate": 26.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "values": {
+            "pooled": 32.4,
+            "equal_replicate": 36.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 8.0,
+          "weight_valid": 5.0,
+          "reasons": [],
+          "value": 2.4,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 8.0,
+          "weight_valid": 5.0,
+          "reasons": [],
+          "value": 12.4,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 8.0,
+          "weight_valid": 5.0,
+          "reasons": [],
+          "value": 22.4,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 8.0,
+          "weight_valid": 5.0,
+          "reasons": [],
+          "value": 32.4,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 4.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 0.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 4.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 4.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 10.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 4.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 22.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 4.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 20.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 4.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 32.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 4.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 30.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 4.0,
+          "weight_valid": 1.0,
+          "reasons": [],
+          "value": 42.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 6.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 16.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 26.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 36.0,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "values": {
+              "pooled": "12/5",
+              "equal_replicate": "6"
+            }
+          },
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "values": {
+              "pooled": "62/5",
+              "equal_replicate": "16"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "values": {
+              "pooled": "112/5",
+              "equal_replicate": "26"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "values": {
+              "pooled": "162/5",
+              "equal_replicate": "36"
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "8",
+            "weight_valid": "5",
+            "value": "12/5"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "8",
+            "weight_valid": "5",
+            "value": "62/5"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "8",
+            "weight_valid": "5",
+            "value": "112/5"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "8",
+            "weight_valid": "5",
+            "value": "162/5"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "4",
+            "weight_valid": "4",
+            "value": "0"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "4",
+            "weight_valid": "1",
+            "value": "12"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "4",
+            "weight_valid": "4",
+            "value": "10"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "4",
+            "weight_valid": "1",
+            "value": "22"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "4",
+            "weight_valid": "4",
+            "value": "20"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "4",
+            "weight_valid": "1",
+            "value": "32"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "4",
+            "weight_valid": "4",
+            "value": "30"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "4",
+            "weight_valid": "1",
+            "value": "42"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "6"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "16"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "26"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "36"
+          }
+        ]
+      }
+    },
+    "F3_scaled": {
+      "row_dims": [
+        "case",
+        "channel"
+      ],
+      "units": {
+        "pooled": null,
+        "equal_replicate": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "values": {
+            "pooled": 2.4,
+            "equal_replicate": 6.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "values": {
+            "pooled": 12.4,
+            "equal_replicate": 16.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "values": {
+            "pooled": 22.4,
+            "equal_replicate": 26.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "values": {
+            "pooled": 32.4,
+            "equal_replicate": 36.0
+          },
+          "reasons": {
+            "pooled": [],
+            "equal_replicate": []
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 56.0,
+          "weight_valid": 35.0,
+          "reasons": [],
+          "value": 2.4,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 56.0,
+          "weight_valid": 35.0,
+          "reasons": [],
+          "value": 12.4,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 56.0,
+          "weight_valid": 35.0,
+          "reasons": [],
+          "value": 22.4,
+          "unit": null
+        },
+        {
+          "column": "pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 6,
+          "n_valid": 4,
+          "n_positive_weight_valid": 4,
+          "weight_total": 56.0,
+          "weight_valid": 35.0,
+          "reasons": [],
+          "value": 32.4,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 28.0,
+          "weight_valid": 28.0,
+          "reasons": [],
+          "value": 0.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 28.0,
+          "weight_valid": 7.0,
+          "reasons": [],
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 28.0,
+          "weight_valid": 28.0,
+          "reasons": [],
+          "value": 10.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 28.0,
+          "weight_valid": 7.0,
+          "reasons": [],
+          "value": 22.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 28.0,
+          "weight_valid": 28.0,
+          "reasons": [],
+          "value": 20.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 28.0,
+          "weight_valid": 7.0,
+          "reasons": [],
+          "value": 32.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 28.0,
+          "weight_valid": 28.0,
+          "reasons": [],
+          "value": 30.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 1,
+          "weight_total": 28.0,
+          "weight_valid": 7.0,
+          "reasons": [],
+          "value": 42.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 6.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 16.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 26.0,
+          "unit": null
+        },
+        {
+          "column": "equal_replicate",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 36.0,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "values": {
+              "pooled": "12/5",
+              "equal_replicate": "6"
+            }
+          },
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "values": {
+              "pooled": "62/5",
+              "equal_replicate": "16"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "values": {
+              "pooled": "112/5",
+              "equal_replicate": "26"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "values": {
+              "pooled": "162/5",
+              "equal_replicate": "36"
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "56",
+            "weight_valid": "35",
+            "value": "12/5"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "56",
+            "weight_valid": "35",
+            "value": "62/5"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "56",
+            "weight_valid": "35",
+            "value": "112/5"
+          },
+          {
+            "column": "pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "56",
+            "weight_valid": "35",
+            "value": "162/5"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "28",
+            "weight_valid": "28",
+            "value": "0"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "28",
+            "weight_valid": "7",
+            "value": "12"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "28",
+            "weight_valid": "28",
+            "value": "10"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "28",
+            "weight_valid": "7",
+            "value": "22"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "28",
+            "weight_valid": "28",
+            "value": "20"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "28",
+            "weight_valid": "7",
+            "value": "32"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "28",
+            "weight_valid": "28",
+            "value": "30"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "28",
+            "weight_valid": "7",
+            "value": "42"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "6"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "16"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "26"
+          },
+          {
+            "column": "equal_replicate",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "36"
+          }
+        ]
+      }
+    },
+    "F5": {
+      "row_dims": [
+        "case",
+        "channel"
+      ],
+      "units": {
+        "response_mean": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 3.0
+          },
+          "reasons": {
+            "response_mean": []
+          }
+        },
+        {
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": 13.0
+          },
+          "reasons": {
+            "response_mean": []
+          }
+        },
+        {
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 23.0
+          },
+          "reasons": {
+            "response_mean": []
+          }
+        },
+        {
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": null
+          },
+          "reasons": {
+            "response_mean": [
+              "insufficient_count"
+            ]
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 2.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 4.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 14.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 22.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 24.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 3.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 13.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 23.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 2.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count"
+          ],
+          "value": null,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "3"
+            }
+          },
+          {
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": "13"
+            }
+          },
+          {
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "23"
+            }
+          },
+          {
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": null
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "2"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "4"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "12"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "14"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "22"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "24"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "3"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "13"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "23"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "0",
+            "value": null
+          }
+        ]
+      }
+    },
+    "F5_permuted": {
+      "row_dims": [
+        "case",
+        "channel"
+      ],
+      "units": {
+        "response_mean": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 3.0
+          },
+          "reasons": {
+            "response_mean": []
+          }
+        },
+        {
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": 13.0
+          },
+          "reasons": {
+            "response_mean": []
+          }
+        },
+        {
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 23.0
+          },
+          "reasons": {
+            "response_mean": []
+          }
+        },
+        {
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": null
+          },
+          "reasons": {
+            "response_mean": [
+              "insufficient_count"
+            ]
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 2.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 4.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 14.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 22.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 24.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 3.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740993,
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 13.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 23.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": 9007199254740995,
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 2.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count"
+          ],
+          "value": null,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "3"
+            }
+          },
+          {
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": "13"
+            }
+          },
+          {
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "23"
+            }
+          },
+          {
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": null
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "2"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "4"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "12"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "14"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "22"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "24"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "3"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740993,
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "13"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "23"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": 9007199254740995,
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "0",
+            "value": null
+          }
+        ]
+      }
+    },
+    "F6": {
+      "row_dims": [
+        "case",
+        "channel"
+      ],
+      "units": {
+        "response_mean": null,
+        "covariate": null,
+        "gain": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 3.0,
+            "covariate": 10.0,
+            "gain": 1.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": 13.0,
+            "covariate": 10.0,
+            "gain": 2.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "values": {
+            "response_mean": 23.0,
+            "covariate": 20.0,
+            "gain": 1.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "values": {
+            "response_mean": 33.0,
+            "covariate": 20.0,
+            "gain": 2.0
+          },
+          "reasons": {
+            "response_mean": [],
+            "covariate": [],
+            "gain": []
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 2.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 4.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 14.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 22.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "a",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 24.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 32.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "channel": "b",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 34.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 3.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 13.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "a"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 23.0,
+          "unit": null
+        },
+        {
+          "column": "response_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1",
+            "channel": "b"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 33.0,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "3",
+              "covariate": "10",
+              "gain": "1"
+            }
+          },
+          {
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": "13",
+              "covariate": "10",
+              "gain": "2"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "values": {
+              "response_mean": "23",
+              "covariate": "20",
+              "gain": "1"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "values": {
+              "response_mean": "33",
+              "covariate": "20",
+              "gain": "2"
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "2"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "4"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "12"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "14"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "22"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "a",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "24"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "32"
+          },
+          {
+            "column": "response_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "channel": "b",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "34"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "3"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "13"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "a"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "23"
+          },
+          {
+            "column": "response_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1",
+              "channel": "b"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "33"
+          }
+        ]
+      }
+    },
+    "F3_support_edges": {
+      "row_dims": [
+        "case"
+      ],
+      "units": {
+        "skip": null,
+        "propagate": null
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": "allmissing"
+          },
+          "values": {
+            "skip": null,
+            "propagate": null
+          },
+          "reasons": {
+            "skip": [
+              "insufficient_count",
+              "zero_weight"
+            ],
+            "propagate": [
+              "missing_values",
+              "insufficient_count",
+              "zero_weight"
+            ]
+          }
+        },
+        {
+          "keys": {
+            "case": "partial"
+          },
+          "values": {
+            "skip": 6.5,
+            "propagate": null
+          },
+          "reasons": {
+            "skip": [],
+            "propagate": [
+              "missing_values"
+            ]
+          }
+        },
+        {
+          "keys": {
+            "case": "small"
+          },
+          "values": {
+            "skip": null,
+            "propagate": null
+          },
+          "reasons": {
+            "skip": [
+              "insufficient_count",
+              "zero_weight"
+            ],
+            "propagate": [
+              "missing_values",
+              "insufficient_count",
+              "zero_weight"
+            ]
+          }
+        },
+        {
+          "keys": {
+            "case": "zero"
+          },
+          "values": {
+            "skip": null,
+            "propagate": null
+          },
+          "reasons": {
+            "skip": [
+              "zero_weight"
+            ],
+            "propagate": [
+              "zero_weight"
+            ]
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "skip",
+          "stage": "samples",
+          "keys": {
+            "case": "allmissing"
+          },
+          "n_input": 3,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count",
+            "zero_weight"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "skip",
+          "stage": "samples",
+          "keys": {
+            "case": "partial"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 104.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 6.5,
+          "unit": null
+        },
+        {
+          "column": "skip",
+          "stage": "samples",
+          "keys": {
+            "case": "small"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "insufficient_count",
+            "zero_weight"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "skip",
+          "stage": "samples",
+          "keys": {
+            "case": "zero"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 0,
+          "weight_total": 0.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "zero_weight"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "propagate",
+          "stage": "samples",
+          "keys": {
+            "case": "allmissing"
+          },
+          "n_input": 3,
+          "n_valid": 0,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "missing_values",
+            "insufficient_count",
+            "zero_weight"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "propagate",
+          "stage": "samples",
+          "keys": {
+            "case": "partial"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 104.0,
+          "weight_valid": 4.0,
+          "reasons": [
+            "missing_values"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "propagate",
+          "stage": "samples",
+          "keys": {
+            "case": "small"
+          },
+          "n_input": 3,
+          "n_valid": 1,
+          "n_positive_weight_valid": 0,
+          "weight_total": 3.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "missing_values",
+            "insufficient_count",
+            "zero_weight"
+          ],
+          "value": null,
+          "unit": null
+        },
+        {
+          "column": "propagate",
+          "stage": "samples",
+          "keys": {
+            "case": "zero"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 0,
+          "weight_total": 0.0,
+          "weight_valid": 0.0,
+          "reasons": [
+            "zero_weight"
+          ],
+          "value": null,
+          "unit": null
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": "allmissing"
+            },
+            "values": {
+              "skip": null,
+              "propagate": null
+            }
+          },
+          {
+            "keys": {
+              "case": "partial"
+            },
+            "values": {
+              "skip": "13/2",
+              "propagate": null
+            }
+          },
+          {
+            "keys": {
+              "case": "small"
+            },
+            "values": {
+              "skip": null,
+              "propagate": null
+            }
+          },
+          {
+            "keys": {
+              "case": "zero"
+            },
+            "values": {
+              "skip": null,
+              "propagate": null
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "skip",
+            "stage": "samples",
+            "keys": {
+              "case": "allmissing"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "skip",
+            "stage": "samples",
+            "keys": {
+              "case": "partial"
+            },
+            "weight_total": "104",
+            "weight_valid": "4",
+            "value": "13/2"
+          },
+          {
+            "column": "skip",
+            "stage": "samples",
+            "keys": {
+              "case": "small"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "skip",
+            "stage": "samples",
+            "keys": {
+              "case": "zero"
+            },
+            "weight_total": "0",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "propagate",
+            "stage": "samples",
+            "keys": {
+              "case": "allmissing"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "propagate",
+            "stage": "samples",
+            "keys": {
+              "case": "partial"
+            },
+            "weight_total": "104",
+            "weight_valid": "4",
+            "value": null
+          },
+          {
+            "column": "propagate",
+            "stage": "samples",
+            "keys": {
+              "case": "small"
+            },
+            "weight_total": "3",
+            "weight_valid": "0",
+            "value": null
+          },
+          {
+            "column": "propagate",
+            "stage": "samples",
+            "keys": {
+              "case": "zero"
+            },
+            "weight_total": "0",
+            "weight_valid": "0",
+            "value": null
+          }
+        ]
+      }
+    },
+    "F4": {
+      "row_dims": [
+        "case"
+      ],
+      "units": {
+        "duration_mean": "s",
+        "temperature_equal": "K",
+        "temperature_pooled": "K",
+        "temperature_min": "K",
+        "temperature_max": "K"
+      },
+      "rows": [
+        {
+          "keys": {
+            "case": "c0"
+          },
+          "values": {
+            "duration_mean": 3.5,
+            "temperature_equal": 294.4,
+            "temperature_pooled": 291.48333333333335,
+            "temperature_min": 273.15,
+            "temperature_max": 313.15
+          },
+          "reasons": {
+            "duration_mean": [],
+            "temperature_equal": [],
+            "temperature_pooled": [],
+            "temperature_min": [],
+            "temperature_max": []
+          }
+        },
+        {
+          "keys": {
+            "case": "c1"
+          },
+          "values": {
+            "duration_mean": 4.5,
+            "temperature_equal": 394.4,
+            "temperature_pooled": 391.48333333333335,
+            "temperature_min": 373.15,
+            "temperature_max": 413.15
+          },
+          "reasons": {
+            "duration_mean": [],
+            "temperature_equal": [],
+            "temperature_pooled": [],
+            "temperature_min": [],
+            "temperature_max": []
+          }
+        }
+      ],
+      "support": [
+        {
+          "column": "duration_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 2.0,
+          "unit": "s"
+        },
+        {
+          "column": "duration_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 5.0,
+          "unit": "s"
+        },
+        {
+          "column": "duration_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 3.0,
+          "unit": "s"
+        },
+        {
+          "column": "duration_mean",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 6.0,
+          "unit": "s"
+        },
+        {
+          "column": "duration_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 3.5,
+          "unit": "s"
+        },
+        {
+          "column": "duration_mean",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 4.5,
+          "unit": "s"
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 4.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 285.65,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 4.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 303.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 4.0,
+          "weight_valid": 4.0,
+          "reasons": [],
+          "value": 385.65,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 4.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 403.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 294.4,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_equal",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 394.4,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c0"
+          },
+          "n_input": 6,
+          "n_valid": 5,
+          "n_positive_weight_valid": 5,
+          "weight_total": 8.0,
+          "weight_valid": 6.0,
+          "reasons": [],
+          "value": 291.48333333333335,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_pooled",
+          "stage": "all_cells",
+          "keys": {
+            "case": "c1"
+          },
+          "n_input": 6,
+          "n_valid": 5,
+          "n_positive_weight_valid": 5,
+          "weight_total": 8.0,
+          "weight_valid": 6.0,
+          "reasons": [],
+          "value": 391.48333333333335,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_min",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 273.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_min",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 3.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 293.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_min",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 373.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_min",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 3.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 393.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_min",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 273.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_min",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 373.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_max",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 303.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_max",
+          "stage": "samples",
+          "keys": {
+            "case": "c0",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 3.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 313.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_max",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r0"
+          },
+          "n_input": 3,
+          "n_valid": 3,
+          "n_positive_weight_valid": 3,
+          "weight_total": 3.0,
+          "weight_valid": 3.0,
+          "reasons": [],
+          "value": 403.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_max",
+          "stage": "samples",
+          "keys": {
+            "case": "c1",
+            "replicate": "r1"
+          },
+          "n_input": 3,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 3.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 413.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_max",
+          "stage": "replicates",
+          "keys": {
+            "case": "c0"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 313.15,
+          "unit": "K"
+        },
+        {
+          "column": "temperature_max",
+          "stage": "replicates",
+          "keys": {
+            "case": "c1"
+          },
+          "n_input": 2,
+          "n_valid": 2,
+          "n_positive_weight_valid": 2,
+          "weight_total": 2.0,
+          "weight_valid": 2.0,
+          "reasons": [],
+          "value": 413.15,
+          "unit": "K"
+        }
+      ],
+      "exact": {
+        "rows": [
+          {
+            "keys": {
+              "case": "c0"
+            },
+            "values": {
+              "duration_mean": "7/2",
+              "temperature_equal": "1472/5",
+              "temperature_pooled": "17489/60",
+              "temperature_min": "5463/20",
+              "temperature_max": "6263/20"
+            }
+          },
+          {
+            "keys": {
+              "case": "c1"
+            },
+            "values": {
+              "duration_mean": "9/2",
+              "temperature_equal": "1972/5",
+              "temperature_pooled": "23489/60",
+              "temperature_min": "7463/20",
+              "temperature_max": "8263/20"
+            }
+          }
+        ],
+        "support": [
+          {
+            "column": "duration_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "2"
+          },
+          {
+            "column": "duration_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "5"
+          },
+          {
+            "column": "duration_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "3"
+          },
+          {
+            "column": "duration_mean",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "6"
+          },
+          {
+            "column": "duration_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "7/2"
+          },
+          {
+            "column": "duration_mean",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "9/2"
+          },
+          {
+            "column": "temperature_equal",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r0"
+            },
+            "weight_total": "4",
+            "weight_valid": "4",
+            "value": "5713/20"
+          },
+          {
+            "column": "temperature_equal",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r1"
+            },
+            "weight_total": "4",
+            "weight_valid": "2",
+            "value": "6063/20"
+          },
+          {
+            "column": "temperature_equal",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r0"
+            },
+            "weight_total": "4",
+            "weight_valid": "4",
+            "value": "7713/20"
+          },
+          {
+            "column": "temperature_equal",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r1"
+            },
+            "weight_total": "4",
+            "weight_valid": "2",
+            "value": "8063/20"
+          },
+          {
+            "column": "temperature_equal",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "1472/5"
+          },
+          {
+            "column": "temperature_equal",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "1972/5"
+          },
+          {
+            "column": "temperature_pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c0"
+            },
+            "weight_total": "8",
+            "weight_valid": "6",
+            "value": "17489/60"
+          },
+          {
+            "column": "temperature_pooled",
+            "stage": "all_cells",
+            "keys": {
+              "case": "c1"
+            },
+            "weight_total": "8",
+            "weight_valid": "6",
+            "value": "23489/60"
+          },
+          {
+            "column": "temperature_min",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "5463/20"
+          },
+          {
+            "column": "temperature_min",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "2",
+            "value": "5863/20"
+          },
+          {
+            "column": "temperature_min",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "7463/20"
+          },
+          {
+            "column": "temperature_min",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "2",
+            "value": "7863/20"
+          },
+          {
+            "column": "temperature_min",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "5463/20"
+          },
+          {
+            "column": "temperature_min",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "7463/20"
+          },
+          {
+            "column": "temperature_max",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "6063/20"
+          },
+          {
+            "column": "temperature_max",
+            "stage": "samples",
+            "keys": {
+              "case": "c0",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "2",
+            "value": "6263/20"
+          },
+          {
+            "column": "temperature_max",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r0"
+            },
+            "weight_total": "3",
+            "weight_valid": "3",
+            "value": "8063/20"
+          },
+          {
+            "column": "temperature_max",
+            "stage": "samples",
+            "keys": {
+              "case": "c1",
+              "replicate": "r1"
+            },
+            "weight_total": "3",
+            "weight_valid": "2",
+            "value": "8263/20"
+          },
+          {
+            "column": "temperature_max",
+            "stage": "replicates",
+            "keys": {
+              "case": "c0"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "6263/20"
+          },
+          {
+            "column": "temperature_max",
+            "stage": "replicates",
+            "keys": {
+              "case": "c1"
+            },
+            "weight_total": "2",
+            "weight_valid": "2",
+            "value": "8263/20"
+          }
+        ]
+      }
+    }
+  },
+  "refusals": [
+    {
+      "id": "R01",
+      "base": "F1",
+      "mutation": "Remove response_mean stages, leaving replicate and sample unresolved.",
+      "code": "residual_dimension"
+    },
+    {
+      "id": "R02",
+      "base": "F1",
+      "mutation": "Replace case coordinates with [\"c0\",\"c0\"].",
+      "code": "duplicate_row_key"
+    },
+    {
+      "id": "R03",
+      "base": "F1",
+      "mutation": "Replace second case coordinate with null.",
+      "code": "missing_row_key"
+    },
+    {
+      "id": "R04",
+      "base": "F1",
+      "mutation": "Set covariate broadcast to [].",
+      "code": "unapproved_broadcast"
+    },
+    {
+      "id": "R05",
+      "base": "F3",
+      "mutation": "Set weights.values[1] to -2.",
+      "code": "negative_weight"
+    },
+    {
+      "id": "R06",
+      "base": "F3",
+      "mutation": "After JSON decoding set weights.values[1] to Python float(\"nan\").",
+      "code": "nonfinite_weight"
+    },
+    {
+      "id": "R07",
+      "base": "F4",
+      "mutation": "Set duration_mean target_unit to \"not_a_known_unit\".",
+      "code": "unknown_unit"
+    },
+    {
+      "id": "R08",
+      "base": "F4",
+      "mutation": "Set duration_mean target_unit to \"kg\".",
+      "code": "incompatible_unit"
+    },
+    {
+      "id": "R09",
+      "base": "F4",
+      "mutation": "Set duration_mean source_unit to null.",
+      "code": "missing_unit_assertion"
+    },
+    {
+      "id": "R10",
+      "base": "F3",
+      "mutation": "Change equal_replicate second stage to weighted_mean with weights source \"weights\".",
+      "code": "unsupported_later_stage_weights"
+    },
+    {
+      "id": "R11",
+      "base": "F1",
+      "mutation": "Delete response_mean first stage missing field.",
+      "code": "missing_stage_policy"
+    },
+    {
+      "id": "R12",
+      "base": "F6",
+      "mutation": "After recording the original source fingerprint, modify response.values[0] from 0 to 1 and replay against that expected fingerprint.",
+      "code": "source_fingerprint_mismatch"
+    },
+    {
+      "id": "R13",
+      "base": "F4",
+      "mutation": "Set duration_mean source_unit to \"s\" while source metadata remains \"ms\".",
+      "code": "source_unit_mismatch"
+    },
+    {
+      "id": "R14",
+      "base": "F1",
+      "mutation": "Delete case from coords.",
+      "code": "missing_row_key"
+    }
+  ],
+  "metamorphic_controls": [
+    {
+      "id": "M1",
+      "base": "F3",
+      "variant": "F3_scaled",
+      "expected": "Identical rows, reasons, counts, units; first-stage weight_total and weight_valid are exactly 7 times base, later-stage support identical."
+    },
+    {
+      "id": "M2",
+      "base": "F5",
+      "variant": "F5_permuted",
+      "expected": "Identical complete canonical numeric result and exact result, including unchanged huge integer keys."
+    },
+    {
+      "id": "M3",
+      "base": "F1",
+      "variant": "F6",
+      "expected": "Identical complete canonical numeric result and exact result."
+    },
+    {
+      "id": "M4",
+      "base": "F6",
+      "variant": "Relocated byte-identical source copy",
+      "expected": "Same source content fingerprint and complete semantic result; file location is not source identity."
+    }
+  ]
+}

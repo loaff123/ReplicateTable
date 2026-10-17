@@ -1,0 +1,110 @@
+{
+  "id": "F3_support_edges",
+  "data": {
+    "coords": {
+      "case": [
+        "zero",
+        "partial",
+        "allmissing",
+        "small"
+      ],
+      "sample": [
+        0,
+        1,
+        2
+      ]
+    },
+    "variables": {
+      "response": {
+        "dims": [
+          "case",
+          "sample"
+        ],
+        "values": [
+          1,
+          2,
+          3,
+          2,
+          null,
+          8,
+          null,
+          null,
+          null,
+          5,
+          null,
+          null
+        ],
+        "units": null,
+        "dtype": "float64"
+      },
+      "weights": {
+        "dims": [
+          "case",
+          "sample"
+        ],
+        "values": [
+          0,
+          0,
+          0,
+          1,
+          100,
+          3,
+          1,
+          2,
+          0,
+          0,
+          1,
+          2
+        ],
+        "units": null,
+        "dtype": "float64"
+      }
+    }
+  },
+  "recipe": {
+    "version": 1,
+    "row_dims": [
+      "case"
+    ],
+    "columns": [
+      {
+        "name": "skip",
+        "source": "response",
+        "source_unit": null,
+        "target_unit": null,
+        "broadcast": [],
+        "stages": [
+          {
+            "name": "samples",
+            "dims": [
+              "sample"
+            ],
+            "op": "weighted_mean",
+            "missing": "skip",
+            "min_count": 2,
+            "weights": "weights"
+          }
+        ]
+      },
+      {
+        "name": "propagate",
+        "source": "response",
+        "source_unit": null,
+        "target_unit": null,
+        "broadcast": [],
+        "stages": [
+          {
+            "name": "samples",
+            "dims": [
+              "sample"
+            ],
+            "op": "weighted_mean",
+            "missing": "propagate",
+            "min_count": 2,
+            "weights": "weights"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "freeze_stage": "Before candidate or baseline execution",
+  "artifacts": {
+    "fixtures/F1.json": "5be327ba2a4dfad6c442601ccff9993b05ee5efb0a870bc958854e5d589ec436",
+    "fixtures/F2.json": "7fea77c2c7153fcd1f38b0bcaffc6ca53476fdc7774f58c1eba77b38b96ef41b",
+    "fixtures/F3.json": "c9c4ade7fbac3d217925649110f71febc1f4c24aacf9fee635d212b8aa01782d",
+    "fixtures/F3_scaled.json": "9be887b40df96946bac30665b93d01e87886e0f1fb5ec3e0a4ffa60fc1291580",
+    "fixtures/F3_support_edges.json": "f16ea59dd0ab57f15bdd9e66cf4440de3fa957c2c71a751efda2be83e60a116f",
+    "fixtures/F4.json": "1fcd351f6f9d928a6fd89a7404ad642fded1775b04f4df228bc3de360fc3aff8",
+    "fixtures/F5.json": "ad70b290444f97c5b5575f5948351b09f104e6c2f662f99d0141d06f11b25382",
+    "fixtures/F5_permuted.json": "7cc165f79af283c966ce01d073ce7c9fe8f2ab5b9119f8b8dde72624e7323959",
+    "fixtures/F6.json": "f83f897490cae203243ab77c422cc677b8c9bed0335faf8b50a361e021d0d7a8",
+    "freeze.md": "41f354fffb85cf8637d874d09f1c4e7b2121628e0d0578140603216164fcfb35",
+    "frozen_expected.json": "74c198a1b0c21cf2ca6d406765c412f862eef4e12d2c99047e5ea713a883172c",
+    "oracle.py": "fde6fa0184e337c48af2307745d1a43b4e9f8e9cc565ba38362da77d6fe7ff4f"
+  }
+}

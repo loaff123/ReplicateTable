@@ -1,0 +1,329 @@
+{
+  "cell_policy": {
+    "full_suite_claim": "Only after explicit full collected-ID inventory and every required group has terminal evidence",
+    "hard_timeout_seconds": 1200,
+    "heartbeat_seconds": 120,
+    "incomplete_receipt": "incomplete, never pass",
+    "target_cell_seconds": 300,
+    "unexpected_skip": "fail portable group and report exact test ID/reason; do not count as pass"
+  },
+  "execution_profiles": [
+    "public312",
+    "public313"
+  ],
+  "groups": {
+    "bundle-format-instrumentation": [
+      {
+        "declared_test_methods": 4,
+        "module": "tests.unit.test_bundle_batching"
+      },
+      {
+        "declared_test_methods": 4,
+        "module": "tests.unit.test_bundle_format_lifetime"
+      },
+      {
+        "declared_test_methods": 13,
+        "module": "tests.unit.test_bundle_formats"
+      },
+      {
+        "declared_test_methods": 7,
+        "module": "tests.unit.test_bundle_manifest"
+      },
+      {
+        "declared_test_methods": 24,
+        "module": "tests.unit.test_bundle_models"
+      },
+      {
+        "declared_test_methods": 14,
+        "module": "tests.unit.test_bundle_payload"
+      },
+      {
+        "declared_test_methods": 3,
+        "module": "tests.unit.test_generated_primitives"
+      }
+    ],
+    "core-codec-model-units-frozen": [
+      {
+        "declared_test_methods": 12,
+        "module": "tests.unit.test_codec"
+      },
+      {
+        "declared_test_methods": 2,
+        "module": "tests.unit.test_codec_lifetime"
+      },
+      {
+        "declared_test_methods": 7,
+        "module": "tests.unit.test_frozen"
+      },
+      {
+        "declared_test_methods": 14,
+        "module": "tests.unit.test_models"
+      },
+      {
+        "declared_test_methods": 13,
+        "module": "tests.unit.test_revision1_repairs"
+      },
+      {
+        "declared_test_methods": 22,
+        "module": "tests.unit.test_units_lifetime"
+      },
+      {
+        "declared_test_methods": 8,
+        "module": "tests.unit.test_units_models"
+      },
+      {
+        "declared_test_methods": 21,
+        "module": "tests.unit.test_units_stock"
+      }
+    ],
+    "experimental-exact-kernel-tmpfs": [
+      {
+        "declared_test_methods": 8,
+        "module": "tests.unit.test_bundle_public_write"
+      },
+      {
+        "declared_test_methods": 4,
+        "module": "tests.unit.test_bundle_reader_admission"
+      },
+      {
+        "declared_test_methods": 10,
+        "module": "tests.unit.test_bundle_transaction"
+      },
+      {
+        "declared_test_methods": 10,
+        "module": "tests.unit.test_bundle_verify"
+      },
+      {
+        "declared_test_methods": 12,
+        "module": "tests.unit.test_native_bundle_reader"
+      },
+      {
+        "declared_test_methods": 8,
+        "module": "tests.unit.test_native_fs_cwd_binding"
+      },
+      {
+        "declared_test_methods": 31,
+        "module": "tests.unit.test_native_fs_generated_roots"
+      },
+      {
+        "declared_test_methods": 2,
+        "module": "tests.unit.test_native_fs_owner_cleanup"
+      },
+      {
+        "declared_test_methods": 21,
+        "module": "tests.unit.test_native_fs_owners"
+      },
+      {
+        "declared_test_methods": 21,
+        "module": "tests.unit.test_native_fs_paths"
+      },
+      {
+        "declared_test_methods": 18,
+        "module": "tests.unit.test_native_fs_profile"
+      },
+      {
+        "declared_test_methods": 13,
+        "module": "tests.unit.test_native_memory_commit"
+      },
+      {
+        "declared_test_methods": 25,
+        "module": "tests.unit.test_native_stage"
+      },
+      {
+        "declared_test_methods": 43,
+        "module": "tests.unit.test_native_workspace"
+      }
+    ],
+    "experimental-supervisor-isolated-process": [
+      {
+        "declared_test_methods": 18,
+        "module": "tests.unit.test_native_supervisor_child"
+      },
+      {
+        "declared_test_methods": 1,
+        "module": "tests.unit.test_native_supervisor_idle_thread"
+      },
+      {
+        "declared_test_methods": 11,
+        "module": "tests.unit.test_native_supervisor_outcome"
+      },
+      {
+        "declared_test_methods": 1,
+        "module": "tests.unit.test_native_supervisor_raw_thread"
+      },
+      {
+        "declared_test_methods": 12,
+        "module": "tests.unit.test_native_supervisor_rss"
+      },
+      {
+        "declared_test_methods": 3,
+        "module": "tests.unit.test_native_supervisor_rss_exit"
+      },
+      {
+        "declared_test_methods": 3,
+        "module": "tests.unit.test_native_supervisor_signal_import"
+      },
+      {
+        "declared_test_methods": 3,
+        "module": "tests.unit.test_native_supervisor_signal_masks"
+      },
+      {
+        "declared_test_methods": 7,
+        "module": "tests.unit.test_native_supervisor_signal_repair"
+      },
+      {
+        "declared_test_methods": 2,
+        "module": "tests.unit.test_native_supervisor_signal_replacement"
+      },
+      {
+        "declared_test_methods": 3,
+        "module": "tests.unit.test_native_supervisor_signal_terminal"
+      },
+      {
+        "declared_test_methods": 11,
+        "module": "tests.unit.test_native_supervisor_signals"
+      }
+    ],
+    "memory-source-and-plan": [
+      {
+        "declared_test_methods": 123,
+        "module": "tests.unit.test_memory_source"
+      },
+      {
+        "declared_test_methods": 46,
+        "module": "tests.unit.test_plan"
+      },
+      {
+        "declared_test_methods": 11,
+        "module": "tests.unit.test_plan_review"
+      }
+    ],
+    "native-budget-and-startup-instrumentation": [
+      {
+        "declared_test_methods": 6,
+        "module": "tests.unit.test_native_budget_control"
+      },
+      {
+        "declared_test_methods": 7,
+        "module": "tests.unit.test_native_budget_estimates"
+      },
+      {
+        "declared_test_methods": 5,
+        "module": "tests.unit.test_native_budget_lifetime"
+      },
+      {
+        "declared_test_methods": 3,
+        "module": "tests.unit.test_native_budget_precedence"
+      },
+      {
+        "declared_test_methods": 14,
+        "module": "tests.unit.test_native_budget_routes"
+      },
+      {
+        "declared_test_methods": 19,
+        "module": "tests.unit.test_native_budget_state"
+      },
+      {
+        "declared_test_methods": 17,
+        "module": "tests.unit.test_native_startup"
+      }
+    ],
+    "reduction-and-result": [
+      {
+        "declared_test_methods": 19,
+        "module": "tests.unit.test_reduce"
+      },
+      {
+        "declared_test_methods": 9,
+        "module": "tests.unit.test_reduce_core"
+      },
+      {
+        "declared_test_methods": 13,
+        "module": "tests.unit.test_result_integration"
+      },
+      {
+        "declared_test_methods": 24,
+        "module": "tests.unit.test_results"
+      }
+    ],
+    "report-and-explanation": [
+      {
+        "declared_test_methods": 20,
+        "module": "tests.unit.test_explain"
+      },
+      {
+        "declared_test_methods": 20,
+        "module": "tests.unit.test_explain_boundaries"
+      },
+      {
+        "declared_test_methods": 2,
+        "module": "tests.unit.test_explain_exact_bytes"
+      },
+      {
+        "declared_test_methods": 12,
+        "module": "tests.unit.test_report"
+      }
+    ],
+    "resource-instrumentation": [
+      {
+        "declared_test_methods": 14,
+        "module": "tests.unit.test_b1_boundaries"
+      },
+      {
+        "declared_test_methods": 8,
+        "module": "tests.unit.test_resource_bounds"
+      },
+      {
+        "declared_test_methods": 12,
+        "module": "tests.unit.test_resource_coverage"
+      },
+      {
+        "declared_test_methods": 27,
+        "module": "tests.unit.test_resource_estimates"
+      },
+      {
+        "declared_test_methods": 7,
+        "module": "tests.unit.test_resource_file_base"
+      },
+      {
+        "declared_test_methods": 12,
+        "module": "tests.unit.test_resource_inputs"
+      },
+      {
+        "declared_test_methods": 4,
+        "module": "tests.unit.test_resource_topology_lifetime"
+      },
+      {
+        "declared_test_methods": 5,
+        "module": "tests.unit.test_resource_v8"
+      }
+    ],
+    "runtime-schema-and-drift-instrumentation": [
+      {
+        "declared_test_methods": 21,
+        "module": "tests.unit.test_runtime_additional"
+      },
+      {
+        "declared_test_methods": 34,
+        "module": "tests.unit.test_runtime_binding"
+      },
+      {
+        "declared_test_methods": 18,
+        "module": "tests.unit.test_runtime_repairs"
+      }
+    ],
+    "source-layout-only": [
+      {
+        "declared_test_methods": 1,
+        "module": "tests.unit.test_exports"
+      },
+      {
+        "declared_test_methods": 2,
+        "module": "tests.unit.test_packaging"
+      }
+    ]
+  },
+  "scope": "Regression scheduling inventory only; AST method counts are not collected or passing test counts. Existing tests include synthetic runtime/profile instrumentation.",
+  "source_and_wheel_origin_rule": "The wheel regression harness must copy only tests, fixtures, docs and project metadata outside checkout; never add checkout/src. Existing source-layout export assertion remains source-only.",
+  "status": "proposed-not-executed"
+}

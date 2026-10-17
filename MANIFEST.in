@@ -1,0 +1,8 @@
+include LICENSE README.md pyproject.toml
+recursive-include docs *.md
+recursive-include src *.py
+recursive-include tests *.py *.json *.md *.html
+recursive-exclude * __pycache__ *.py[cod]
+recursive-include examples *.py
+recursive-include qualification *.py *.sh *.md *.json *.lock *.txt
+recursive-include .github *.yml
